@@ -17,22 +17,6 @@ RUN fc-cache -fv
 # Set working directory
 WORKDIR /cv
 
-# Install any missing LaTeX packages
-RUN tlmgr update --self && \
-    tlmgr install \
-    fontawesome5 \
-    roboto \
-    sourcesanspro \
-    tcolorbox \
-    environ \
-    trimspaces \
-    enumitem \
-    xstring \
-    xifthen \
-    etoolbox \
-    parskip \
-    unicode-math
-
 # Copy all CV files
 COPY . ./
 

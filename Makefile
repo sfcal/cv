@@ -18,7 +18,7 @@ run:
 		-v $(PWD):/cv \
 		-v $(PWD)/output:/cv/output \
 		latex-cv
-	cp output/cv.pdf ../public/cv.pdf
+	@if [ -d ../public ]; then cp output/cv.pdf ../public/cv.pdf; else echo "../public not found, skipping copy (PDF is in output/cv.pdf)"; fi
 
 # Clean output
 clean:
